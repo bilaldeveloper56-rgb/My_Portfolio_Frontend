@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Muhammad Bilal Khan | Senior MERN Stack Developer & Software Engineer</title>
+    <meta name="title" content="Muhammad Bilal Khan | Senior MERN Stack Developer & Software Engineer" />
+    <meta name="description" content="Explore the portfolio of Muhammad Bilal Khan, a Senior MERN Stack Developer building high-performance, accessible SaaS products and custom web applications." />
+    <meta name="keywords" content="Muhammad Bilal Khan, MERN Stack, React Developer, Node.js Engineer, Full Stack Portfolio, Web Developer, Web Design, SaaS Engineer" />
+    <meta name="author" content="Muhammad Bilal Khan" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bilalkhan.dev/" />
+    <meta property="og:title" content="Muhammad Bilal Khan | Senior MERN Stack Developer & Software Engineer" />
+    <meta property="og:description" content="Explore the portfolio of Muhammad Bilal Khan, a Senior MERN Stack Developer building high-performance, accessible SaaS products and custom web applications." />
+    <meta property="og:image" content="https://bilalkhan.dev/og-image.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://bilalkhan.dev/" />
+    <meta property="twitter:title" content="Muhammad Bilal Khan | Senior MERN Stack Developer & Software Engineer" />
+    <meta property="twitter:description" content="Explore the portfolio of Muhammad Bilal Khan, a Senior MERN Stack Developer building high-performance, accessible SaaS products and custom web applications." />
+    <meta property="twitter:image" content="https://bilalkhan.dev/og-image.png" />
+
+    <!-- Google Fonts (Inter & Outfit) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Theme Prevention Script (avoids white/dark flash on boot) -->
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        let theme = 'dark'; // default to dark for premium look
+        if (savedTheme) {
+          theme = savedTheme === 'system' 
+            ? (systemPrefersDark ? 'dark' : 'light')
+            : savedTheme;
+        } else if (!systemPrefersDark) {
+          theme = 'light';
+        }
+        
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
+
+    <!-- JSON-LD Structured Data for Person/Engineer -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Muhammad Bilal Khan",
+        "url": "https://bilalkhan.dev/",
+        "jobTitle": "Senior Full Stack Engineer",
+        "knowsAbout": ["MongoDB", "Express.js", "React.js", "Node.js", "SaaS Development", "RESTful API Development"],
+        "sameAs": [
+          "https://github.com/bilalkhan-dev",
+          "https://linkedin.com/in/bilalkhan-dev"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
