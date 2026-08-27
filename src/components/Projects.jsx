@@ -119,18 +119,33 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "EduTrack LMS Dashboard",
+      title: "EduManager — School ERP & LMS",
+      status: "Client Project — In Development",
       description:
-        "A modern Learning Management System dashboard featuring role-based layouts, student and teacher panels, assignments, lessons, gradebooks, and responsive navigation.",
-      category: "frontend",
-      tech: ["React", "React Router", "Tailwind CSS"],
+        "Multi-tenant School ERP & LMS platform currently being developed for a client, designed to manage academic sessions, classes, sections, students, teachers, attendance, assignments, administration, authentication, notifications, and role-based workflows.",
+      category: "fullstack",
+      tech: ["React", "Node.js", "Express", "MongoDB", "RBAC", "Redis", "Socket.io", "Resend"],
       mockup: "dashboard",
-      image: "/LMS.png",
-      github: "https://github.com/bilaldeveloper56-rgb/LMS_PROJECT",
-      demo: "https://lms-project-4555.vercel.app/",
+      image: "/LMS (2).png",
+      github: "https://github.com/bilaldeveloper56-rgb/LMS_Full_Stack_Project_Frontend",
+      demo: "https://lms-full-stack-project-frontend-ten.vercel.app/",
+      featured: true,
     },
     {
       id: 4,
+      title: "KKR Restaurant — Platform Concept",
+      status: "Client Demo / Proposal",
+      description:
+        "Restaurant website prototype developed for client review, demonstrating the proposed design, interactive menu, cart and order management, and full-stack architecture.",
+      category: "fullstack",
+      tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Cloudinary"],
+      mockup: "dashboard",
+      image: "/kkr.png",
+      github: "https://github.com/bilaldeveloper56-rgb/KKR-Peshawar",
+      demo: "https://kkr-peshawar-frontend.vercel.app/",
+    },
+    {
+      id: 5,
       title: "Expense Tracker Pro",
       description:
         "A clean and interactive expense tracking application with income/expense management, balance calculation, and a responsive user interface.",
@@ -142,7 +157,7 @@ const Projects = () => {
       demo: "https://expense-tracker-roan-delta.vercel.app/",
     },
     {
-      id: 5,
+      id: 6,
       title: "Nexcent Business Landing Page",
       description:
         "A professional and modern business landing page designed to showcase services, client testimonials, and product features with sleek styling.",
@@ -283,6 +298,12 @@ const Projects = () => {
               >
                 {/* CSS Mockup or Image Container */}
                 <div className="h-[180px] bg-[#0F172A] border-b border-card-border overflow-hidden relative flex items-center justify-center">
+                  {project.status && (
+                    <span className="absolute top-3 left-3 z-10 bg-card/90 backdrop-blur text-text-main text-[0.65rem] font-semibold px-2.5 py-0.5 rounded-full shadow flex items-center gap-1.5 border border-white/10">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                      {project.status}
+                    </span>
+                  )}
                   {project.featured && (
                     <span className="absolute top-3 right-3 z-10 bg-primary/90 backdrop-blur text-[#F8FAFC] text-[0.65rem] font-bold px-2 py-0.5 rounded-full shadow flex items-center gap-1 border border-white/10">
                       <Star size={10} className="fill-current text-[#F59E0B]" />{" "}

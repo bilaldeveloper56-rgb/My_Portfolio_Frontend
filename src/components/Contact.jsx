@@ -170,11 +170,15 @@ const Contact = () => {
         });
 
         // POST multipart request to backend messages route
-        await axios.post('/api/messages', formPayload, {
+        const response = await axios.post('/api/messages', formPayload, {
           headers: {
             'Content-Type': 'multipart/form-data'
           }
         });
+
+        if (!response.data || response.data.success !== true) {
+          throw new Error(response.data?.error || response.data?.message || 'Unable to send message right now. Please try again later.');
+        }
       }
 
       setStatus('success');
@@ -182,7 +186,7 @@ const Contact = () => {
       resetForm();
     } catch (err) {
       console.error('Contact Form Submission Error:', err);
-      const serverError = err.response?.data?.error || err.message || 'Submission failed. Please check network and try again.';
+      const serverError = err.response?.data?.error || err.response?.data?.message || err.message || 'Submission failed. Please check network and try again.';
       setErrorMessage(serverError);
       setStatus('error');
     }
