@@ -128,7 +128,7 @@ const Projects = () => {
       mockup: "dashboard",
       image: "/LMS (2).png",
       github: "https://github.com/bilaldeveloper56-rgb/LMS_Full_Stack_Project_Frontend",
-      demo: "https://lms-full-stack-project-frontend-ten.vercel.app/",
+      demo: "https://app.lmsprime.online/login",
       featured: true,
     },
     {
